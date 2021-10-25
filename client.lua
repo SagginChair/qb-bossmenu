@@ -58,37 +58,19 @@ local menu_button3 = menu:AddButton({
     value = nil,
     description = 'View Outfits'
 })
-local menu_button4 = menu:AddButton({
-    icon = '💰',
-    label = 'Society Money',
-    value = menu2,
-    description = 'View/Manage Society Money'
-})
 local menu_button5 = menu2:AddButton({
     icon = '💲',
     label = '',
     value = nil,
     description = 'Current Society Amount'
 })
-local menu_button6 = menu2:AddButton({
-    icon = '🤑',
-    label = 'Withdraw',
-    value = menu2,
-    description = 'Withdraw Money From Society'
-})
-local menu_button7 = menu2:AddButton({
-    icon = '🏦',
-    label = 'Deposit',
-    value = menu2,
-    description = 'Deposit Money Into Society'
-})
 
 -- Storage
 menu_button2:On("select", function()
     MenuV:CloseMenu(menu)
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "boss_" .. PlayerJob.name, {
-        maxweight = 4000000,
-        slots = 500,
+        maxweight = 2000000,
+        slots = 100,
     })
     TriggerEvent("inventory:client:SetCurrentStash", "boss_" .. PlayerJob.name)
 end)
@@ -97,29 +79,6 @@ end)
 menu_button3:On("select", function()
     MenuV:CloseMenu(menu)
     TriggerEvent('qb-clothing:client:openOutfitMenu')
-end)
-
--- Society
-menu_button4:On('select', function()
-    UpdateSociety()
-end)
-
--- Withdraw
-menu_button6:On("select", function()
-    local result = LocalInput('Withdrawal Amount', 255, '')
-    if result ~= nil then
-        TriggerServerEvent("qb-bossmenu:server:withdrawMoney", tonumber(result))
-        UpdateSociety()
-    end
-end)
-
--- Deposit
-menu_button7:On("select", function()
-    local result = LocalInput('Deposit Amount', 255, '')
-    if result ~= nil then
-        TriggerServerEvent("qb-bossmenu:server:depositMoney", tonumber(result))
-        UpdateSociety()
-    end
 end)
 
 -- Employees
