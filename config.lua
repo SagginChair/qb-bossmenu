@@ -7,6 +7,6 @@ Config.Jobs = {
     ['taxi'] = vector3(903.32, -170.55, 74.0),
     ['cardealer'] = vector3(-32.0, -1114.2, 26.4),
     ['mechanic'] = vector3(-1427.88, -457.98, 35.91),
-    ['blackmarket'] = vector3(0.1, 9.98, 35.91),
+    ['blackmarket'] = vector3(-593.23, 217.41, 74.15),
     ['burgershot'] = vector3(-1192.04, -902.476, 13.998),
 }
