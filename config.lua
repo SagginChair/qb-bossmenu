@@ -10,5 +10,5 @@ Config.Jobs = {
     ['blackmarket'] = vector3(-593.23, 217.41, 74.15),
     ['burgershot'] = vector3(-1192.04, -902.476, 13.998),
     ['whitewidow'] = vector3(182.26, -251.58, 54.07),
-    ['bestbuds'] = vector3(375.96, -823.84, 29.3),
+    ['stripclub'] = vector3(94.93, -1292.74, 29.26),
 }
