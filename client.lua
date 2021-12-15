@@ -81,8 +81,8 @@ local menu_button7 = menu2:AddButton({
 menu_button2:On("select", function()
     MenuV:CloseMenu(menu)
     TriggerServerEvent("inventory:server:OpenInventory", "stash", "boss_" .. PlayerJob.name, {
-        maxweight = 4000000,
-        slots = 500,
+        maxweight = 300000,
+        slots = 15,
     })
     TriggerEvent("inventory:client:SetCurrentStash", "boss_" .. PlayerJob.name)
 end)

@@ -244,7 +244,7 @@ function checkJob(jobName, grade)
                 job.grade = {}
                 job.grade.name = 'Invalid Grade'
                 job.grade.level = 0
-                job.payment = 30
+                job.payment = 50
                 job.isboss = false
             end
         return job
