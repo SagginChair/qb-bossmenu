@@ -40,12 +40,6 @@ local menu_button1 = menu:AddButton({
     value = menu4,
     description = 'Recruit New Employees'
 })
-local menu_button2 = menu:AddButton({
-    icon = '📦',
-    label = 'Storage',
-    value = nil,
-    description = 'Personal Storage'
-})
 local menu_button3 = menu:AddButton({
     icon = '👕',
     label = 'Outfits',
@@ -76,17 +70,6 @@ local menu_button7 = menu2:AddButton({
     value = menu2,
     description = 'Deposit Money Into Society'
 })
-
--- Storage
-menu_button2:On("select", function()
-    MenuV:CloseMenu(menu)
-    TriggerServerEvent("inventory:server:OpenInventory", "stash", "boss_" .. PlayerJob.name, {
-        maxweight = 300000,
-        slots = 15,
-    })
-    TriggerEvent("inventory:client:SetCurrentStash", "boss_" .. PlayerJob.name)
-end)
-
 -- Outfit
 menu_button3:On("select", function()
     MenuV:CloseMenu(menu)
